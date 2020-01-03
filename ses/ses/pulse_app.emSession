@@ -26,12 +26,14 @@
   <ProjectSessionItem path="pulse_app;pulse_app"/>
   <ProjectSessionItem path="pulse_app;pulse_app;Application"/>
   <ProjectSessionItem path="pulse_app;pulse_app;atwinc1500"/>
+  <ProjectSessionItem path="pulse_app;pulse_app;atwinc1500netif"/>
   <ProjectSessionItem path="pulse_app;pulse_app;enc28j60driver"/>
   <ProjectSessionItem path="pulse_app;pulse_app;FreeRTOS"/>
   <ProjectSessionItem path="pulse_app;pulse_app;lwip"/>
   <ProjectSessionItem path="pulse_app;pulse_app;nRF_BLE_Services"/>
   <ProjectSessionItem path="pulse_app;pulse_app;nRF_Drivers"/>
   <ProjectSessionItem path="pulse_app;pulse_app;nRF_Libraries"/>
+  <ProjectSessionItem path="pulse_app;pulse_app;nRF_TLS"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="pulse_app" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -62,6 +64,7 @@
    <Watchpoint numelements="0" expression="netif_default" evalMode="1" name="netif_default" radix="-1" linenumber="0" filename="../ses" list=""/>
    <Watchpoint expression="txbuff" name="txbuff" radix="-1" linenumber="0" filename="../ses"/>
    <Watchpoint expression="revid" name="revid" radix="-1" linenumber="0" filename="../ses"/>
+   <Watchpoint expression="count_led_on" name="count_led_on" radix="-1" linenumber="0" filename=""/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -74,28 +77,40 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1011" useTextEdit="1" useBinaryEdit="0" left="0" path="../../main_app.c" selected="0" top="990" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="49" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/include/lwipopts.h" selected="0" top="36" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1011" useTextEdit="1" useBinaryEdit="0" left="0" path="../../main_app.c" selected="1" top="1011" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="77" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/include/lwipopts.h" selected="0" top="48" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1169" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../nRF5_SDK_15.3.0_59ac345/external/freertos/source/include/FreeRTOS.h" selected="0" top="1125" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="163" useTextEdit="1" useBinaryEdit="0" left="0" path="../../config/FreeRTOSConfig.h" selected="0" top="163" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="51" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/core/stats.c" selected="0" top="20" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="473" useTextEdit="1" useBinaryEdit="0" left="0" path="../../socket_test.c" selected="0" top="378" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="958" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../AA_PULSE_LATEST_10.17.2019/main_app.c" selected="0" top="936" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="146" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/core/stats.c" selected="0" top="134" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="462" useTextEdit="1" useBinaryEdit="0" left="0" path="../../socket_test.c" selected="0" top="446" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="727" useTextEdit="1" useBinaryEdit="0" left="0" path="../../temperature.c" selected="0" top="1291" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="178" useTextEdit="1" useBinaryEdit="0" left="0" path="../../htu21d.c" selected="0" top="155" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="398" useTextEdit="1" useBinaryEdit="0" left="0" path="../../power_factor.c" selected="0" top="375" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1209" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/api/api_msg.c" selected="0" top="1192" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="315" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/api/tcpip.c" selected="0" top="294" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="648" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/api/api_lib.c" selected="0" top="626" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/include/lwip/opt.h" selected="0" top="197" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="599" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/api/api_lib.c" selected="0" top="595" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="105" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/include/lwip/opt.h" selected="0" top="90" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="264" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/core/init.c" selected="0" top="219" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="285" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/core/memp.c" selected="0" top="240" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="303" useTextEdit="1" useBinaryEdit="0" left="0" path="../../cmd.c" selected="0" top="274" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="29" useTextEdit="1" useBinaryEdit="0" left="0" path="../../cmd.h" selected="0" top="15" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="700" useTextEdit="1" useBinaryEdit="0" left="0" path="../../network.c" selected="0" top="688" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="585" useTextEdit="1" useBinaryEdit="0" left="0" path="../../tcptest.c" selected="0" top="570" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="23" useTextEdit="1" useBinaryEdit="0" left="0" path="../../network.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="394" useTextEdit="1" useBinaryEdit="0" left="0" path="../../enc28j60driver/enc28j60.c" selected="1" top="384" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="719" useTextEdit="1" useBinaryEdit="0" left="0" path="../../cmd.c" selected="0" top="704" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="43" useTextEdit="1" useBinaryEdit="0" left="0" path="../../cmd.h" selected="0" top="15" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="89" useTextEdit="1" useBinaryEdit="0" left="0" path="../../network.c" selected="0" top="75" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="1003" useTextEdit="1" useBinaryEdit="0" left="0" path="../../tcptest.c" selected="0" top="969" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" useBinaryEdit="0" left="0" path="../../network.h" selected="0" top="9" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="191" useTextEdit="1" useBinaryEdit="0" left="0" path="../../enc28j60driver/enc28j60.c" selected="0" top="176" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../enc28j60driver/enchw.c" selected="0" top="9" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1025" useTextEdit="1" useBinaryEdit="0" left="0" path="../../tls_interface.c" selected="0" top="1023" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="357" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/include/lwip/sockets.h" selected="0" top="340" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="783" useTextEdit="1" useBinaryEdit="0" left="0" path="../../lwip/api/sockets.c" selected="0" top="767" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="279" useTextEdit="1" useBinaryEdit="0" left="0" path="../../ble.c" selected="0" top="246" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="7" y="451" useTextEdit="1" useBinaryEdit="0" left="0" path="../../winc1500/driver/source/m2m_wifi.c" selected="0" top="512" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="289" useTextEdit="1" useBinaryEdit="0" left="0" path="../../winc1500/driver/source/nmdrv.c" selected="0" top="346" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="23" y="573" useTextEdit="1" useBinaryEdit="0" left="0" path="../../winc1500/driver/include/m2m_wifi.h" selected="0" top="552" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="1027" useTextEdit="1" useBinaryEdit="0" left="0" path="../../winc1500/driver/include/m2m_types.h" selected="0" top="1014" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="33" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../winc1500netif/winc1500netif.c" selected="0" top="76" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="21" useTextEdit="1" useBinaryEdit="0" left="0" path="../../analog.c" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="82" useTextEdit="1" useBinaryEdit="0" left="0" path="../../enc28j60driver/mchdrv.c" selected="0" top="72" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="18" useTextEdit="1" useBinaryEdit="0" left="0" path="../../enc28j60driver/enc28j60-consts.h" selected="0" top="0" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="pulse_app" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

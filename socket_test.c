@@ -168,7 +168,7 @@ void socket_test_task(void *arg) {
     }
     else{
     NRF_LOG_INFO("trying to connect\n");
-     n = sprintf(str, "trying to connect\n");
+     n = sprintf(str, "success trying to connect\n");
      ble_serial_send(str, n);
      }
   }
@@ -183,7 +183,7 @@ void socket_test_task(void *arg) {
      }
      else{
      NRF_LOG_INFO("trying to connect\n");
-     n = sprintf(str, "trying to connect\n");
+     n = sprintf(str, "success trying to connect\n");
      ble_serial_send(str, n);
          }
   }
@@ -457,7 +457,7 @@ else if( strcmp(config_string1,"config[circuit:4,phase:1,voltage:240,frequen:60]
       }
       else{
       NRF_LOG_INFO("trying to connect\n");
-           n = sprintf(str, "trying to connect\n");
+           n = sprintf(str, "success trying to connect\n");
           ble_serial_send(str, n);
       }
       

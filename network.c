@@ -704,7 +704,7 @@ void network_task_fn(void *arg) {
 //           check_internet = 1;
           }
 
-                if(keyflag == 1 && keyconnect == 1){ 
+                if(keyflag == 1 && keyconnect == 1 && led_on ==1){ 
                  count_led_on ++;
                  if(count_led_on >10){
                  count_led_on = 0;
