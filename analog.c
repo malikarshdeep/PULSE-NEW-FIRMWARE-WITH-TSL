@@ -19,7 +19,7 @@
 
 
 void timer_handler(nrf_timer_event_t event_type, void *p_context) {
-}
+ }
 
 void saadc_sampling_event_init(void) {
   ret_code_t err_code;
